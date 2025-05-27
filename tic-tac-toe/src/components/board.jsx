@@ -36,9 +36,15 @@ const Board = () => {
         } 
         return null;
     }
+
+    const winner = calculateWinner(squares);
+    let status;
+    if (winner){ status= "The winner is " + winner;} 
+    else{status="the next player is " +(xIsNext? "X" : "O")
+}
         return (
             <div>
-                <p>the winner is</p>
+                <p>{status}</p>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
