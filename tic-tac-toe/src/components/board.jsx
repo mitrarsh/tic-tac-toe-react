@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Square from './square';
-import { useState } from 'react';
 
 const Board = ({onPlay, squares, xIsNext}) => {
 
